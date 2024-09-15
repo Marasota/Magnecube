@@ -10,10 +10,7 @@ public class Character : MonoBehaviour, IControllable
 
     public void Move(Vector3 direction)
     {
-        _movementHandler.StartMoving(direction);     
-    }
-    public void StopMoving() { 
-        _movementHandler.StopMoving();
+        _movementHandler.SetDirection(direction);     
     }
 
     private void Awake()
@@ -28,8 +25,17 @@ public class Character : MonoBehaviour, IControllable
         _movementHandler.Move();
     }
 
+
+    private void OnCollisionExit(Collision collision)
+    {
+        Debug.Log("OnColExit");
+        _movementHandler.StartMoving();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("OnColEnter");
         _movementHandler.StopMoving();
     }
+ 
 }
