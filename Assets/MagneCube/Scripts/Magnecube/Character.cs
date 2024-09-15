@@ -1,32 +1,35 @@
 using UnityEngine;
 using Zenject;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Character : MonoBehaviour, IControllable
 {
-
     private MovementHandler _movementHandler;
+    private CollisionsHandler _collisionsHandler;
+    private Rigidbody _rb;
 
-    #region PUBLIC METHODS
     public void Move(Vector3 direction)
     {
-        _movementHandler.StartMoving(direction);
+        _movementHandler.StartMoving(direction);     
+    }
+    public void StopMoving() { 
+        _movementHandler.StopMoving();
     }
 
-    #endregion
-
-    #region MONO
     private void Awake()
     {
-        _movementHandler = new MovementHandler(transform);
+        _rb = GetComponent<Rigidbody>();
+        _movementHandler = new MovementHandler(_rb);   
+       
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _movementHandler.Move();
     }
 
-    #endregion
-
-
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        _movementHandler.StopMoving();
+    }
 }
