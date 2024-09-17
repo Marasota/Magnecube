@@ -1307,6 +1307,7 @@ GameObject:
   - component: {fileID: 1110467011}
   - component: {fileID: 1110467010}
   - component: {fileID: 1110467009}
+  - component: {fileID: 1110467012}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Platform
@@ -1322,7 +1323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110467007}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.67, y: 0.4166088, z: -0.122179985}
   m_LocalScale: {x: 1.0879, y: 2.5598125, z: 0.91757}
   m_ConstrainProportionsScale: 0
@@ -1400,6 +1401,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110467007}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1110467012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110467007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30e2e06ca8411aa4ca3da7c4c306696c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rotationAngle: 90
+  _rotationDuration: 1
+  _waitTimeBetweenRotations: 1.5
+  _ease: 14
 --- !u!1 &1135754746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1429,6 @@ GameObject:
   - component: {fileID: 1135754750}
   - component: {fileID: 1135754749}
   - component: {fileID: 1135754748}
-  - component: {fileID: 1135754753}
   - component: {fileID: 1135754751}
   - component: {fileID: 1135754752}
   m_Layer: 2
@@ -1556,18 +1572,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
---- !u!114 &1135754753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135754746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57353ea3947297c4a903de760ad1c591, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1188026440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,7 +1635,7 @@ Transform:
   m_GameObject: {fileID: 1300302171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.24, y: -1.863937, z: -0.122179985}
+  m_LocalPosition: {x: -2.24, y: 0.56, z: -0.122179985}
   m_LocalScale: {x: 1.0879, y: 1.0161381, z: 0.91757}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1927,7 +1931,7 @@ Transform:
   m_GameObject: {fileID: 1878493122}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.2400002, y: -1.8639369, z: -0.122179985}
+  m_LocalPosition: {x: -2.2400002, y: 0.4, z: -0.122179985}
   m_LocalScale: {x: 1.0879, y: 1.0161381, z: 0.91757}
   m_ConstrainProportionsScale: 0
   m_Children: []

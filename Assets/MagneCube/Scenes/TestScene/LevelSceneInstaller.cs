@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
-public class TestSceneInstaller : MonoInstaller
+public class LevelSceneInstaller : MonoInstaller
 {
     [SerializeField] private Character _player;
     [SerializeField] private DesktopInputController _desktopInputController;
